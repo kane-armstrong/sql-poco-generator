@@ -7,6 +7,8 @@
 
     <ItemGroup>
       <PackageReference Include="Dapper" Version="2.0.4" />
+      <PackageReference Include="Microsoft.CodeAnalysis.Compilers" Version="3.2.1" />
+      <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.2.1" />
       <PackageReference Include="Pedantic.IO.EmbeddedResource" Version="0.9.0-pre-02" />
       <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
     </ItemGroup>

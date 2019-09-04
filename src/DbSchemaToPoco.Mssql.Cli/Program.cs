@@ -29,7 +29,8 @@ namespace DbSchemaToPoco.Mssql.Cli
             
             var explorer = new SqlServerSchemaExplorer(cs);
             var tables = await explorer.GetTablesAsync(CancellationToken.None);
-            var renderer = new ClassRenderer();
+//            var renderer = new ClassRenderer();
+            var renderer = new ClassRendererV2();
             foreach (var table in tables)
             {
                 Console.WriteLine("Class:");
