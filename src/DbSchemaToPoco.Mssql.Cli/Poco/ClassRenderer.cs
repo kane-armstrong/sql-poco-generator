@@ -24,7 +24,7 @@ namespace DbSchemaToPoco.Mssql.Cli.Poco
 
             foreach (var property in template.Properties)
             {
-                builder.AppendLine($"{Tab}{Tab}public {property.DataType} {property.LegalCsharpName}" + "{ get; } { set; }");
+                builder.AppendLine($"{Tab}{Tab}public {property.DataType} {property.LegalCsharpName} " + "{ get; set; }");
             }
             
             builder.AppendLine(Tab + "}");
