@@ -21,7 +21,8 @@ namespace DbSchemaToPoco.Mssql.Cli.Poco
             foreach (var property in template.Properties)
             {
                 var propertyDeclaration = SyntaxFactory
-                    .PropertyDeclaration(SyntaxFactory.ParseName(property.DataType), property.LegalCsharpName)
+                    .PropertyDeclaration(SyntaxFactory.ParseTypeName(property.DataType),
+                        SyntaxFactory.ParseToken(property.LegalCsharpName))
                     .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
                     .AddAccessorListAccessors(
                         SyntaxFactory
@@ -31,7 +32,7 @@ namespace DbSchemaToPoco.Mssql.Cli.Poco
                             .AccessorDeclaration(SyntaxKind.SetAccessorDeclaration)
                             .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken)));
 
-                classDeclaration = classDeclaration.AddMembers(propertyDeclaration);
+                classDeclaration = classDeclaration.AddMembers(propertyDeclaration.NormalizeWhitespace());
             }
             
             @namespace = @namespace.AddMembers(classDeclaration);
