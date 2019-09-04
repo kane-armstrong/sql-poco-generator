@@ -7,6 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4AE0FF36-16B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbSchemaToPoco.Mssql.Cli", "src\DbSchemaToPoco.Mssql.Cli\DbSchemaToPoco.Mssql.Cli.csproj", "{60EEF3A8-DC4A-489A-9509-9638AA17EE1E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F5805180-EEBD-4C1C-8A2C-5FFCFBC9E018}"
+ProjectSection(SolutionItems) = preProject
+	README.md = README.md
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
