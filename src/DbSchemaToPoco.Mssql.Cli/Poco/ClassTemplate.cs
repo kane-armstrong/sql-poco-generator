@@ -1,0 +1,12 @@
+using System.Collections.Generic;
+using DbSchemaToPoco.Mssql.Cli.Schema.Models;
+
+namespace DbSchemaToPoco.Mssql.Cli.Poco
+{
+    public class ClassTemplate
+    {
+        public string Namespace { get; set; }
+        public string TypeName { get; set; }
+        public IList<Column> Properties { get; set; }
+    }
+}

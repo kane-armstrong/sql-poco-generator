@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="mssql-csharp-poco-generator.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="src" t="Include">
+        <e p="DbSchemaToPoco.Mssql.Cli" t="IncludeRecursive">
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="DbSchemaToPoco.Mssql.Cli.csproj" t="IncludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netcoreapp2.2" t="Include">
+                <e p="DbSchemaToPoco.Mssql.Cli.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Poco" t="Include">
+            <e p="Class.cs" t="Include" />
+            <e p="ClassRenderer.cs" t="Include" />
+            <e p="ClassTemplate.cs" t="Include" />
+          </e>
+          <e p="Program.cs" t="Include" />
+          <e p="Schema" t="Include">
+            <e p="Models" t="Include">
+              <e p="Column.cs" t="Include" />
+              <e p="ColumnSchema.cs" t="Include" />
+              <e p="Constraint.cs" t="Include" />
+              <e p="ConstraintType.cs" t="Include" />
+              <e p="Name.cs" t="Include" />
+              <e p="Table.cs" t="Include" />
+              <e p="TableConstraint.cs" t="Include" />
+            </e>
+            <e p="Resources" t="Include">
+              <e p="GetColumnSchema.sql" t="Include" />
+              <e p="GetTableConstraints.sql" t="Include" />
+              <e p="QueryContent.cs" t="Include" />
+            </e>
+            <e p="SqlServerSchemaExplorer.cs" t="Include" />
+            <e p="StringExtensions.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_mssql-csharp-poco-generator.-522124232.00" t="ExcludeRecursive" />
+  </component>
+</project>

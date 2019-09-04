@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Dapper" Version="2.0.4" />
+      <PackageReference Include="Pedantic.IO.EmbeddedResource" Version="0.9.0-pre-02" />
+      <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Schema\Resources\GetColumnSchema.sql" />
+      <EmbeddedResource Include="Schema\Resources\GetColumnSchema.sql">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <None Remove="Schema\Resources\GetTableConstraints.sql" />
+      <EmbeddedResource Include="Schema\Resources\GetTableConstraints.sql">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+
+</Project>
