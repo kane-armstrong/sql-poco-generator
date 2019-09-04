@@ -7,10 +7,12 @@ namespace DbSchemaToPoco.Mssql.Cli.Poco
     {
         public string Render(ClassTemplate template)
         {
+            var syntaxFactory = SyntaxFactory.CompilationUnit()
+                .AddUsings(SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System")));
+
             var @namespace = SyntaxFactory
                 .NamespaceDeclaration(SyntaxFactory.ParseName(template.Namespace))
-                .NormalizeWhitespace()
-                .AddUsings(SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System")));
+                .NormalizeWhitespace();
 
             var classDeclaration = SyntaxFactory
                 .ClassDeclaration(template.TypeName)
@@ -31,10 +33,12 @@ namespace DbSchemaToPoco.Mssql.Cli.Poco
 
                 classDeclaration = classDeclaration.AddMembers(propertyDeclaration);
             }
-
+            
             @namespace = @namespace.AddMembers(classDeclaration);
 
-            return @namespace.NormalizeWhitespace().ToFullString();
+            syntaxFactory = syntaxFactory.AddMembers(@namespace);
+            
+            return syntaxFactory.NormalizeWhitespace().ToFullString();
         }
     }
 }
