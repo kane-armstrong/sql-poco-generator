@@ -1,3 +1,4 @@
+using System;
 using System.Text.RegularExpressions;
 
 namespace DbSchemaToPoco.Mssql.Cli.Schema
@@ -11,7 +12,7 @@ namespace DbSchemaToPoco.Mssql.Cli.Schema
         internal static string EscapeIllegalCsharpClassSymbols(this string obj)
         {
             var result = obj;
-            var firstCharacterIsIllegalChar = NumberRegex.Match(obj.Substring(0, 1)).Success;
+            var firstCharacterIsIllegalChar = NumberRegex.Match(obj.AsSpan(0, 1).ToString()).Success;
             if (firstCharacterIsIllegalChar)
             {
                 result = EscapeCharacter + result;

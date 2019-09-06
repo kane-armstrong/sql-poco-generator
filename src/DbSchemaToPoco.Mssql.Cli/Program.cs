@@ -1,10 +1,9 @@
-﻿using System;
+﻿using DbSchemaToPoco.Mssql.Cli.Poco;
+using DbSchemaToPoco.Mssql.Cli.Schema;
+using System;
 using System.IO;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using DbSchemaToPoco.Mssql.Cli.Poco;
-using DbSchemaToPoco.Mssql.Cli.Schema;
 
 namespace DbSchemaToPoco.Mssql.Cli
 {
@@ -26,11 +25,11 @@ namespace DbSchemaToPoco.Mssql.Cli
             var namespaceName = Console.ReadLine();
             Console.Write("Enter output path: ");
             var outputPath = Console.ReadLine();
-            
+
             var explorer = new SqlServerSchemaExplorer(cs);
             var tables = await explorer.GetTablesAsync(CancellationToken.None);
-//            var renderer = new ClassRenderer();
-            var renderer = new ClassRendererV2();
+            var renderer = new ClassRenderer();
+            //            var renderer = new ClassRendererV2();
             foreach (var table in tables)
             {
                 Console.WriteLine("Class:");
@@ -45,9 +44,9 @@ namespace DbSchemaToPoco.Mssql.Cli
                 Console.WriteLine($"Saving it to disk, see {fileName}");
                 File.WriteAllLines(fileName, content.Split(Environment.NewLine));
             }
-            
+
             Console.WriteLine("Done.");
-            
+
             Console.ReadKey();
         }
     }
