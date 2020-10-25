@@ -1,7 +1,7 @@
 using System.Reflection;
 using Pedantic.IO;
 
-namespace DbSchemaToPoco.Mssql.Cli.Schema.Resources
+namespace SqlPocoGenerator.Schema.Resources
 {
     internal static class QueryContent
     {

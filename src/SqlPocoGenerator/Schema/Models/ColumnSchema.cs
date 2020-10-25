@@ -1,4 +1,4 @@
-namespace DbSchemaToPoco.Mssql.Cli.Schema.Models
+namespace SqlPocoGenerator.Schema.Models
 {
     internal class ColumnSchema
     {

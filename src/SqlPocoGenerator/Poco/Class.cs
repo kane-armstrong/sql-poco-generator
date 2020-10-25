@@ -1,6 +1,6 @@
-using DbSchemaToPoco.Mssql.Cli.Schema.Models;
+using SqlPocoGenerator.Schema.Models;
 
-namespace DbSchemaToPoco.Mssql.Cli.Poco
+namespace SqlPocoGenerator.Poco
 {
     public class Class
     {

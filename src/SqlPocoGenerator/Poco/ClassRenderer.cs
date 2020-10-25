@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace DbSchemaToPoco.Mssql.Cli.Poco
+namespace SqlPocoGenerator.Poco
 {
     public class ClassRenderer
     {

@@ -1,7 +1,7 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
-namespace DbSchemaToPoco.Mssql.Cli.Poco
+namespace SqlPocoGenerator.Poco
 {
     public class ClassRendererV2
     {

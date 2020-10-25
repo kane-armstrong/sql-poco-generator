@@ -5,10 +5,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Dapper;
-using DbSchemaToPoco.Mssql.Cli.Schema.Models;
-using DbSchemaToPoco.Mssql.Cli.Schema.Resources;
+using SqlPocoGenerator.Schema.Models;
+using SqlPocoGenerator.Schema.Resources;
 
-namespace DbSchemaToPoco.Mssql.Cli.Schema
+namespace SqlPocoGenerator.Schema
 {
 public class SqlServerSchemaExplorer
     {

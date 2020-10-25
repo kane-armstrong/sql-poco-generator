@@ -1,7 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace DbSchemaToPoco.Mssql.Cli.Schema
+namespace SqlPocoGenerator.Schema
 {
     internal static class StringExtensions
     {

@@ -1,11 +1,11 @@
-﻿using DbSchemaToPoco.Mssql.Cli.Poco;
-using DbSchemaToPoco.Mssql.Cli.Schema;
-using System;
+﻿using System;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using SqlPocoGenerator.Poco;
+using SqlPocoGenerator.Schema;
 
-namespace DbSchemaToPoco.Mssql.Cli
+namespace SqlPocoGenerator
 {
     class Program
     {

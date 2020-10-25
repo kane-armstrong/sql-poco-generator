@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DbSchemaToPoco.Mssql.Cli.Schema.Models
+namespace SqlPocoGenerator.Schema.Models
 {
     public class Table
     {
