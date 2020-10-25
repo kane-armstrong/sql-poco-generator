@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4AE0FF36-16B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F5805180-EEBD-4C1C-8A2C-5FFCFBC9E018}"
 	ProjectSection(SolutionItems) = preProject
+		Jenkinsfile = Jenkinsfile
 		README.md = README.md
 	EndProjectSection
 EndProject
