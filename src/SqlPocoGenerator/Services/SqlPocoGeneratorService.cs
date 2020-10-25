@@ -22,6 +22,11 @@ namespace SqlPocoGenerator.Services
             Console.Write("Enter output path: ");
             var outputPath = Console.ReadLine();
 
+            if (!Directory.Exists(outputPath))
+            {
+                Directory.CreateDirectory(outputPath);
+            }
+
             var explorer = new SqlServerSchemaExplorer(cs);
             var tables = await explorer.GetTablesAsync(CancellationToken.None);
             var renderer = new ClassRenderer();
