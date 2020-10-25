@@ -10,10 +10,16 @@ namespace SqlPocoGenerator.Services
 {
     public class SqlPocoGeneratorService : IHostedService
     {
+        private readonly IApplicationLifetime _applicationLifetime;
+
+        public SqlPocoGeneratorService(IApplicationLifetime applicationLifetime)
+        {
+            _applicationLifetime = applicationLifetime;
+        }
+
         public async Task StartAsync(CancellationToken cancellationToken)
         {
             Console.WriteLine("--------Class generator--------");
-            Console.WriteLine("I can generate C# POCOs from tables in a MSSQL database");
             Console.WriteLine("Example connection string: Persist Security Info=False;User ID=MY_SQL_USER;Password=MY_SQL_PASSWORD;Server=localhost,1433; Initial Catalog=MY_CATALOG_NAME");
             Console.Write("Enter connection string: ");
             var cs = Console.ReadLine();
@@ -47,8 +53,8 @@ namespace SqlPocoGenerator.Services
             }
 
             Console.WriteLine("Done.");
-
-            Console.ReadKey();
+            
+            _applicationLifetime.StopApplication();
         }
 
         public Task StopAsync(CancellationToken cancellationToken)
